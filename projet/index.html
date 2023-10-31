@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tailwind projet</title>
+        <!-- ===== Framework Tailwind ==== -->
+        <link rel="stylesheet" href="../dist/output.css" />
+        <!-- === Awesome Fonts === -->
+        <script
+            src="https://kit.fontawesome.com/d0fb25e48c.js"
+            crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <img src="" alt="">
+
+        <!-- =============== hero Section =================== -->
+        <div class="h-[100vh] w-[100%] bg-[url('../projet/img/bg.jpg')] bg-cover bg-center">
+            <div
+                class="absolute w-[100%] h-[100%] bg-primary bg-opacity-90"></div>
+            <!-- Header -->
+            <header class="bg-gray-300 h-[80px] w-[100%] relative">
+                <div class="container mx-auto h-[100%]">
+                    <!-- === navbar === -->
+                    <nav
+                        class="md:flex justify-between items-center px-7 h-[100%]">
+                        <!-- Navbar-->
+                        <div
+                            class="w-[100%] flex justify-between items-center h-[100%]">
+                            <div><a href="#" class="text-3xl">Library</a></div>
+                            <div class="cursor-pointer md:hidden" id="menuBtn">
+                                <img
+                                    src="../projet/icons_svg/Bars3.svg"
+                                    alt="Menu"
+                                    class="w-11"
+                                    id="imgBtn" />
+                            </div>
+                        </div>
+                        <div>
+                            <!-- Contqainer nav Bar-->
+                            <ul
+                                id="navLinks"
+                                class="absolute top-[100%] hidden w-[100%] left-0 bg-gray-100 p-7 md:p-0 md:flex md:relative md:bg-transparent transition duration-300 z-20">
+                                <li class="py-2">
+                                    <a
+                                        class="text-xl text-primary font-semibold px-4 hover:text-secondary transition duration-150 ease-linear"
+                                        href="#"
+                                        >Home</a
+                                    >
+                                </li>
+                                <li class="py-2">
+                                    <a
+                                        class="text-xl text-primary font-semibold px-4 hover:text-secondary transition duration-150 ease-linear"
+                                        href="#"
+                                        >Categories</a
+                                    >
+                                </li>
+                                <li class="py-2">
+                                    <a
+                                        class="text-xl text-primary font-semibold px-4 hover:text-secondary transition duration-150 ease-linear"
+                                        href="#"
+                                        >Pages</a
+                                    >
+                                </li>
+                                <li class="py-2">
+                                    <a
+                                        class="text-xl text-primary font-semibold px-4 hover:text-secondary transition duration-150 ease-linear"
+                                        href="#"
+                                        >Others</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <!-- End Header-->
+            <img src="" alt="" />
+            <div class="container relative mx-auto">
+                <!-- ==== Hero Bady ==== -->
+                <div class="grid mt-[20%] md:mt-[20%] xl:grid-cols-2">
+                    <!-- === Content ===-->
+                    <div class="pt-40 mb-14 h-[100%] md:pt-20">
+                        <h1
+                            class="text-6xl text-center text-white mb-5 xl:text-left md:text-8xl">
+                            Featured Book of
+                        </h1>
+                        <h2
+                            class="font-bold text-center text-5xl text-white xl:text-left md:text-7xl">
+                            This month
+                        </h2>
+
+                        <!-- === btn main === -->
+                        <div class="text-center xl:text-left">
+                            <a class="btn inline-block" href="#">See more</a>
+                        </div>
+                    </div>
+                    <div class="w-[95%] mx-auto md:w-[100%]">
+                        <img src="./img/pubimg.png" alt="punImages" class="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- =================== hero Section =============== -->
+
+        <!-- ======= Start Bestselling Books ====== -->
+
+        <div class="pt-[100px] pb-[50px]">
+            <div class="container mx-auto">
+                <!-- ================= Header ================= -->
+                <div class="mx-3 flex items-center justify-between"">
+
+                <h1 class="text-3xl md:text-5xl">Bestselling books</h1>
+                <div class="">
+                    <a
+                        class="text-gray-500 hover:text-secondary text-xl flex items-center justify-between gap-2 xl:text-xl"
+                        href="#"
+                        ><span>View All</span>
+                        <i
+                            class="fa-solid fa-chevron-right hover:text-secondary text-gray-500 text-[22px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ==================== End Header ============= -->
+
+            <!-- ==== Cards Container ===== -->
+            <div class="content_books grid mx-3 mt-6 xl:grid-cols-4">
+                <!-- ==== Card_Books ===== -->
+                <div class="card border-2 p-5">
+                    <div class="img flex justify-center">
+                        <img
+                            src="./img/book.png"
+                            alt="Book"
+                            class="w-[120px]" />
+                    </div>
+
+                    <div class="text my-5">
+                        <span
+                            class="text-secondary uppercase tracking-widest text-xl"
+                            >kindle</span
+                        >
+                        <p class="text-xl font-medium py-2">
+                            Angry God (All Saints High Book 3)
+                        </p>
+                    </div>
+                    <div class="text">
+                        <span class="text-gray-500 tracking-widest text-xl"
+                            >L.j Shen</span
+                        >
+                        <div>
+                            <span class="text-2xl font-medium">$1.30</span>
+                            <span class="text-xl text-gray-500">$1.30</span>
+                        </div>
+                        <div class="flex items-center mt-4">
+                            <a class="group w-[100%]" href="#"
+                                ><i
+                                    class="fa-solid fa-store text-xl group-hover:text-secondary cursor-pointer text-gray-600"></i
+                                ><span
+                                    class="text-xl ml-2 group-hover:text-secondary"
+                                    >Add to Card</span
+                                ></a
+                            >
+                            <span class=""
+                                ><i
+                                    class="fa-regular fa-heart text-2xl cursor-pointer hover:text-secondary transition duration-150 text-gray-500"></i
+                            ></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- ==== Card_Books ===== -->
+
+                <!-- ==== Card_Books ===== -->
+                <div class="card border-2 p-5">
+                    <div class="img flex justify-center">
+                        <img
+                            src="./img/book.png"
+                            alt="Book"
+                            class="w-[120px]" />
+                    </div>
+
+                    <div class="text my-5">
+                        <span
+                            class="text-secondary uppercase tracking-widest text-xl"
+                            >kindle</span
+                        >
+                        <p class="text-xl font-medium py-2">
+                            Angry God (All Saints High Book 3)
+                        </p>
+                    </div>
+                    <div class="text">
+                        <span class="text-gray-500 tracking-widest text-xl"
+                            >L.j Shen</span
+                        >
+                        <div>
+                            <span class="text-2xl font-medium">$1.30</span>
+                            <span class="text-xl text-gray-500">$1.30</span>
+                        </div>
+                        <div class="flex items-center mt-4">
+                            <a class="group w-[100%]" href="#"
+                                ><i
+                                    class="fa-solid fa-store text-xl group-hover:text-secondary cursor-pointer text-gray-600"></i
+                                ><span
+                                    class="text-xl ml-2 group-hover:text-secondary"
+                                    >Add to Card</span
+                                ></a
+                            >
+                            <span class=""
+                                ><i
+                                    class="fa-regular fa-heart text-2xl cursor-pointer hover:text-secondary transition duration-150 text-gray-500"></i
+                            ></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- ==== Card_Books ===== -->
+
+                <!-- ==== Card_Books ===== -->
+                <div class="card border-2 p-5">
+                    <div class="img flex justify-center">
+                        <img
+                            src="./img/book.png"
+                            alt="Book"
+                            class="w-[120px]" />
+                    </div>
+
+                    <div class="text my-5">
+                        <span
+                            class="text-secondary uppercase tracking-widest text-xl"
+                            >kindle</span
+                        >
+                        <p class="text-xl font-medium py-2">
+                            Angry God (All Saints High Book 3)
+                        </p>
+                    </div>
+                    <div class="text">
+                        <span class="text-gray-500 tracking-widest text-xl"
+                            >L.j Shen</span
+                        >
+                        <div>
+                            <span class="text-2xl font-medium">$1.30</span>
+                            <span class="text-xl text-gray-500">$1.30</span>
+                        </div>
+                        <div class="flex items-center mt-4">
+                            <a class="group w-[100%]" href="#"
+                                ><i
+                                    class="fa-solid fa-store text-xl group-hover:text-secondary cursor-pointer text-gray-600"></i
+                                ><span
+                                    class="text-xl ml-2 group-hover:text-secondary"
+                                    >Add to Card</span
+                                ></a
+                            >
+                            <span class=""
+                                ><i
+                                    class="fa-regular fa-heart text-2xl cursor-pointer hover:text-secondary transition duration-150 text-gray-500"></i
+                            ></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- ==== Card_Books ===== -->
+
+                <!-- ==== Card_Books ===== -->
+                <div class="card border-2 p-5">
+                    <div class="img flex justify-center">
+                        <img
+                            src="./img/book.png"
+                            alt="Book"
+                            class="w-[120px]" />
+                    </div>
+
+                    <div class="text my-5">
+                        <span
+                            class="text-secondary uppercase tracking-widest text-xl"
+                            >kindle</span
+                        >
+                        <p class="text-xl font-medium py-2">
+                            Angry God (All Saints High Book 3)
+                        </p>
+                    </div>
+                    <div class="text">
+                        <span class="text-gray-500 tracking-widest text-xl"
+                            >L.j Shen</span
+                        >
+                        <div>
+                            <span class="text-2xl font-medium">$1.30</span>
+                            <span class="text-xl text-gray-500">$1.30</span>
+                        </div>
+                        <div class="flex items-center mt-4">
+                            <a class="group w-[100%]" href="#"
+                                ><i
+                                    class="fa-solid fa-store text-xl group-hover:text-secondary cursor-pointer text-gray-600"></i
+                                ><span
+                                    class="text-xl ml-2 group-hover:text-secondary"
+                                    >Add to Card</span
+                                ></a
+                            >
+                            <span class=""
+                                ><i
+                                    class="fa-regular fa-heart text-2xl cursor-pointer hover:text-secondary transition duration-150 text-gray-500"></i
+                            ></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- ==== Card_Books ===== -->
+            </div>
+        </div>
+        <!-- ======= End Bestselling Books ====== -->
+
+        <!-- ======= Start Deals ====== -->
+        <section class="pt-[100px] pb-[50px]" style="background-color: #fff6f6">
+            <div class="container mx-auto">
+                <div class="mx-3 flex items-center justify-between"">
+                <h1 class="text-3xl md:text-5xl">Deals of the Week</h1>
+                <div class="">
+                    <a
+                        class="text-gray-500 hover:text-secondary text-xl flex items-center justify-between gap-2 xl:text-xl"
+                        href="#"
+                        ><span>View All</span>
+                        <i
+                            class="fa-solid fa-chevron-right hover:text-secondary text-gray-500 text-[22px]"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- ==================== End Header ============= -->
+
+            <div class="content_books grid mx-3 mt-6 xl:grid-cols-2 relative">
+                <!-- =============== icon Left ============== -->
+                <div
+                    class="group flex items-center justify-center w-[50px] h-[50px] transition ease-linear duration-300 border bg-white cursor-pointer hover:bg-secondary absolute top-2/4 left-0 xl:left-[-60px]">
+                    <i
+                        class="fa-solid fa-chevron-left group-hover:text-white transition ease-linear duration-300"></i>
+                </div>
+                <!-- ==================== icon ============ -->
+                <!-- ==== Card_Books ===== -->
+                <div
+                    class="card border-2 p-5 flex flex-col xl:flex-row xl:p-8 bg-white">
+                    <div class="img flex justify-center">
+                        <img
+                            src="./img/book.png"
+                            alt="Book"
+                            class="w-[250px] h-[350px]" />
+                    </div>
+                    <div class="text xl:px-8">
+                        <div class="text my-5">
+                            <span
+                                class="text-secondary uppercase tracking-widest text-xl"
+                                >kindle</span
+                            >
+                            <p class="text-xl font-medium py-2">
+                                Angry God (All Saints High Book 3)
+                            </p>
+                        </div>
+                        <div class="text">
+                            <span class="text-gray-500 tracking-widest text-xl"
+                                >L.j Shen</span
+                            >
+                            <div>
+                                <span class="text-2xl font-medium">$1.30</span>
+                                <span class="text-xl text-gray-500">$1.30</span>
+                            </div>
+                            <div class="flex items-center mt-4">
+                                <a class="group w-[100%]" href="#"
+                                    ><i
+                                        class="fa-solid fa-store text-xl group-hover:text-secondary cursor-pointer text-gray-600"></i
+                                    ><span
+                                        class="text-xl ml-2 group-hover:text-secondary"
+                                        >Add to Card</span
+                                    ></a
+                                >
+                                <span class=""
+                                    ><i
+                                        class="fa-regular fa-heart text-2xl cursor-pointer hover:text-secondary transition duration-150 text-gray-500"></i
+                                ></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ==== Card_Books ===== -->
+                <!-- ==== Card_Books ===== -->
+                <div
+                    class="card border-2 p-5 flex flex-col xl:flex-row xl:p-8 bg-white">
+                    <div class="img flex justify-center">
+                        <img
+                            src="./img/book.png"
+                            alt="Book"
+                            class="w-[250px] h-[350px]" />
+                    </div>
+                    <div class="text xl:px-8">
+                        <div class="text my-5">
+                            <span
+                                class="text-secondary uppercase tracking-widest text-xl"
+                                >kindle</span
+                            >
+                            <p class="text-xl font-medium py-2">
+                                Angry God (All Saints High Book 3)
+                            </p>
+                        </div>
+                        <div class="text">
+                            <span class="text-gray-500 tracking-widest text-xl"
+                                >L.j Shen</span
+                            >
+                            <div>
+                                <span class="text-2xl font-medium">$1.30</span>
+                                <span class="text-xl text-gray-500">$1.30</span>
+                            </div>
+                            <div class="flex items-center mt-4">
+                                <a class="group w-[100%]" href="#"
+                                    ><i
+                                        class="fa-solid fa-store text-xl group-hover:text-secondary cursor-pointer text-gray-600"></i
+                                    ><span
+                                        class="text-xl ml-2 group-hover:text-secondary"
+                                        >Add to Card</span
+                                    ></a
+                                >
+                                <span class=""
+                                    ><i
+                                        class="fa-regular fa-heart text-2xl cursor-pointer hover:text-secondary transition duration-150 text-gray-500"></i
+                                ></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ==== Card_Books ===== -->
+
+                <!-- =============== icon Left ============== -->
+                <div
+                    class="group flex items-center justify-center w-[50px] h-[50px] transition ease-linear duration-300 border bg-white cursor-pointer hover:bg-secondary absolute top-2/4 right-0 xl:right-[-60px]">
+                    <i
+                        class="fa-solid fa-chevron-right group-hover:text-white transition ease-linear duration-300"></i>
+                </div>
+                <!-- ==================== icon ============ -->
+            </div>
+        </section>
+        <!-- =============== End Deals -->
+
+
+        <!-- ============ Script JS =========  -->
+        <script src="main.js" defer></script>
+    </body>
+</html>
