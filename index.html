@@ -10,7 +10,19 @@
         <script
             src="https://kit.fontawesome.com/d0fb25e48c.js"
             crossorigin="anonymous"></script>
-            <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: "#2D3B46",
+                            secondary: "#F24F09",
+                        },
+                    },
+                },
+            };
+        </script>
     </head>
     <body>
         <img src="" alt="" />
@@ -27,8 +39,7 @@
                     <nav
                         class="md:flex justify-between items-center px-7 h-[100%]">
                         <!-- Navbar-->
-                        <div
-                            class="w-[100%] flex justify-between items-center h-[100%]">
+                        <div class="flex justify-between items-center h-[100%]">
                             <div><a href="#" class="text-3xl">Library</a></div>
                             <div class="cursor-pointer md:hidden" id="menuBtn">
                                 <img
@@ -38,7 +49,7 @@
                                     id="imgBtn" />
                             </div>
                         </div>
-                        <div>
+                        <div class="flex">
                             <!-- Contqainer nav Bar-->
                             <ul
                                 id="navLinks"
@@ -71,7 +82,16 @@
                                         >Others</a
                                     >
                                 </li>
+                                <li class="py-2">
+                                    <a
+                                        <
+                                        class="text-xl text-primary font-semibold px-4 hover:text-secondary transition duration-150 ease-linear"
+                                        href="dashboard.html"
+                                        >Dashboard</a
+                                    >
+                                </li>
                             </ul>
+                            <div class="py-2"></div>
                         </div>
                     </nav>
                 </div>
@@ -474,7 +494,7 @@
             <div class="container mx-auto mt-20 xl:text-left text-center mb-5">
                 <div class="grid xl:grid-cols-4 xl:gap-20">
                     <!-- ========= info =========== -->
-                    <div class=""> 
+                    <div class="">
                         <h3 class="text-3xl text-white mb-8">Library</h3>
                         <ul>
                             <li class="text-white text-xl mb-2">
@@ -488,35 +508,35 @@
                                 +1 246-345-0695
                             </li>
                         </ul>
-                        <ul class="flex gap-5 items-center justify-center xl:justify-start py-8">
-                            <li class="w-[45px] h-[45px]  bg-gray-600 flex items-center justify-center cursor-pointer">
+                        <ul
+                            class="flex gap-5 items-center justify-center xl:justify-start py-8">
+                            <li
+                                class="w-[45px] h-[45px] bg-gray-600 flex items-center justify-center cursor-pointer">
                                 <i class="fa-brands text-white fa-facebook"></i>
                             </li>
-                            <li class="w-[45px] h-[45px] bg-gray-600 flex items-center justify-center cursor-pointer">
-                                <i class="fa-brands text-white   fa-twitter"></i>
+                            <li
+                                class="w-[45px] h-[45px] bg-gray-600 flex items-center justify-center cursor-pointer">
+                                <i class="fa-brands text-white fa-twitter"></i>
                             </li>
-                            <li class="w-[45px] h-[45px] bg-gray-600 flex items-center justify-center cursor-pointer">
-                                <i class="fa-brands text-white  fa-instagram"></i>
+                            <li
+                                class="w-[45px] h-[45px] bg-gray-600 flex items-center justify-center cursor-pointer">
+                                <i
+                                    class="fa-brands text-white fa-instagram"></i>
                             </li>
-                            <li class="w-[45px] h-[45px] bg-gray-600 flex items-center justify-center cursor-pointer">
-                                <i class="fa-brands text-white   fa-linkedin"></i>
+                            <li
+                                class="w-[45px] h-[45px] bg-gray-600 flex items-center justify-center cursor-pointer">
+                                <i class="fa-brands text-white fa-linkedin"></i>
                             </li>
                         </ul>
                     </div>
                     <!-- ========= info =========== -->
                     <!-- ========= Explorer =========== -->
-                    <div class=""> 
+                    <div class="">
                         <h3 class="text-3xl text-white mb-8">Explore</h3>
                         <ul>
-                            <li class="text-white text-xl mb-2">
-                                About us
-                            </li>
-                            <li class="text-white text-xl mb-2">
-                                Sitemap
-                            </li>
-                            <li class="text-white text-xl mb-2">
-                                Bookmarks
-                            </li>
+                            <li class="text-white text-xl mb-2">About us</li>
+                            <li class="text-white text-xl mb-2">Sitemap</li>
+                            <li class="text-white text-xl mb-2">Bookmarks</li>
                             <li class="text-white text-xl mb-2">
                                 Sign in/Join
                             </li>
@@ -524,57 +544,44 @@
                     </div>
                     <!-- ========= Explore =========== -->
                     <!-- ========= Costumer Services =========== -->
-                    <div class=""> 
-                        <h3 class="text-3xl text-white mb-8">Costumer Services</h3>
+                    <div class="">
+                        <h3 class="text-3xl text-white mb-8">
+                            Costumer Services
+                        </h3>
                         <ul>
-                            <li class="text-white text-xl mb-2">
-                                Help Center
-                            </li>
-                            <li class="text-white text-xl mb-2">
-                                Returns
-                            </li>
+                            <li class="text-white text-xl mb-2">Help Center</li>
+                            <li class="text-white text-xl mb-2">Returns</li>
                             <li class="text-white text-xl mb-2">
                                 Product Recalls
                             </li>
                             <li class="text-white text-xl mb-2">
                                 Accessibility
                             </li>
-                            <li class="text-white text-xl mb-2">
-                                Contact us 
-                            </li>
+                            <li class="text-white text-xl mb-2">Contact us</li>
                         </ul>
                     </div>
                     <!-- ========= Ecostumer Services =========== -->
                     <!-- ========= Categories =========== -->
-                    <div class=""> 
+                    <div class="">
                         <h3 class="text-3xl text-white mb-8">Categories</h3>
                         <ul>
-                            <li class="text-white text-xl mb-2">
-                                Action
-                            </li>
-                            <li class="text-white text-xl mb-2">
-                                Comedy
-                            </li>
-                            <li class="text-white text-xl mb-2">
-                                Drama
-                            </li>
-                            <li class="text-white text-xl mb-2">
-                                Horror
-                            </li>
-                            <li class="text-white text-xl mb-2">
-                                Kids
-                            </li>
+                            <li class="text-white text-xl mb-2">Action</li>
+                            <li class="text-white text-xl mb-2">Comedy</li>
+                            <li class="text-white text-xl mb-2">Drama</li>
+                            <li class="text-white text-xl mb-2">Horror</li>
+                            <li class="text-white text-xl mb-2">Kids</li>
                         </ul>
                     </div>
                     <!-- ========= Categories =========== -->
-                    
                 </div>
             </div>
             <!-- ====== content ======== -->
             <!-- ============= Section Body Footer =======================-->
             <!-- ================= copyright ============================ -->
             <div class="border-t p-6 text-center">
-                <p class="text-xl text-white">©2023 Book Worm. All rights reserved</p>
+                <p class="text-xl text-white">
+                    ©2023 Book Worm. All rights reserved
+                </p>
             </div>
             <!-- ================= copyright ============================ -->
         </footer>
