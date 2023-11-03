@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Page</title>
+  </head>
+  <body>
+    <header class="bg-gray-300 h-[80px] w-[100%] relative">
+      <div class="container mx-auto h-[100%]">
+          <!-- === navbar === -->
+          <nav
+              class="md:flex justify-between items-center px-7 h-[100%]">
+              <!-- Navbar-->
+              <div class="flex justify-between items-center h-[100%]">
+                  <div><a href="#" class="text-3xl">Library</a></div>
+                  <div class="cursor-pointer md:hidden" id="menuBtn">
+                      <img
+                          src="images/icons_svg/Bars3.svg"
+                          alt="Menu"
+                          class="w-11"
+                          id="imgBtn" />
+                  </div>
+              </div>
+              <div class="flex">
+                  <!-- Contqainer nav Bar-->
+                  <ul
+                      id="navLinks"
+                      class="absolute top-[100%] hidden w-[100%] left-0 bg-gray-100 p-7 md:p-0 md:flex md:relative md:bg-transparent transition duration-300 z-20">
+                      <li class="py-2">
+                          <a
+                              class="text-xl text-primary font-semibold px-4 hover:text-secondary transition duration-150 ease-linear"
+                              href="index.html"
+                              >Home</a
+                          >
+                      </li>
+                      <li class="py-2">
+                          <a
+                              class="text-xl text-primary font-semibold px-4 hover:text-secondary transition duration-150 ease-linear"
+                              href="#"
+                              >Categories</a
+                          >
+                      </li>
+                      <li class="py-2">
+                          <a
+                              class="text-xl text-primary font-semibold px-4 hover:text-secondary transition duration-150 ease-linear"
+                              href="about.html"
+                              >About</a
+                          >
+                      </li>
+                      <li class="py-2">
+                          <a
+                              class="text-xl text-primary font-semibold px-4 hover:text-secondary transition duration-150 ease-linear"
+                              href="#"
+                              >Others</a
+                          >
+                      </li>
+                      <li class="py-2">
+                          <a
+                              <
+                              class="text-xl text-primary font-semibold px-4 hover:text-secondary transition duration-150 ease-linear"
+                              href="dashboard.html"
+                              >Dashboard</a
+                          >
+                      </li>
+                  </ul>
+                  <div class="py-2"></div>
+              </div>
+          </nav>
+      </div>
+  </header>
+    <section class="">
+      <div class="container mx-auto flex gap-x-28 items-center flex-col md:flex-row text-center md:text-left">
+        <div class="pt-12">
+          <img src="cover.jpg" class="" />
+        </div>
+
+        <div class="">
+          <h3 class="text-2xl font-semibold my-2 text-left">
+            All You Can Ever Know: A Memoir
+          </h3>
+          <p class="text-sm mb-2">
+            By (author) <span class="font-thin ml-2">Nicole Chung</span>
+          </p>
+          <h3 class="font-bold my-4">$10.29</h3>
+          <p class="text-sm text-gray-500 mb-4 w-96">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Excepteur sint occaecat.
+          </p>
+          <button
+            type="submit"
+            class="text-white bg-black w-96 h-10 text-center mb-2 hover:scale-110 hover:rounded-md"
+          >
+           Ajouter au Panier
+          </button>
+          <div class="flex justify-start gap-28 mt-2">
+            <div class="flex gap-2">
+                <div>
+                  <i class="fa-regular fa-heart" ></i>
+                </div>
+                <p>Add to wishlist</p>
+              </div>
+              <div class="flex gap-2">
+                <div><i class="fa-solid fa-share-nodes"></i></div>
+                <p>Share</p>
+              </div>
+          </div>
+         
+        </div>
+      </div>
+    </section>
+
+    <section>
+        <div class="flex container mx-auto md:gap-40 mt-14 ml-1 md:ml-8 border-x-gray-700 border-solid 	border-t-2 flex-col gap-8 md:flex-row">
+            <div class="border-r-2 text-base ml-2">
+                <h3 class="underline pr-40 mb-2 mt-4 ">Description</h3>
+                <h3 class="mb-2 w-28">Product Details</h3>
+                <h3>Videos</h3>
+            </div>
+            <div class="mt-4  text-sm ">
+                <p>We aim to show you accurate product information.Manufacturers, suppliers and others provide what you see here, and we have not verified it. See our disclaimer.</p>
+                <p>#1 New York Times Bestseller</p>
+                <p>A Reese Witherspoon x Hello Sunshine Book Club Pick</p>
+                <p>“I can’t even express how much I love this book! I didn’t want this story to end!”–Reese Witherspoon</p>
+                <p class="my-4">“Painfully beautiful.”–The New York Times Book Review</p>
+                <p class="mb-2">“Perfect for fans of Barbara Kingsolver.”–Bustle</p>
+                <p>We aim to show you accurate product information.Manufacturers, suppliers and others provide what you see here, and we have not verified it. See our disclaimer.</p>
+                <p class="mt-2">Perfect for fans of Barbara Kingsolver and Karen Russell, Where the Crawdads Sing is at once an exquisite ode to the natural world, a heartbreaking coming-of-age story, and a surprising tale of possible murder. Owens reminds us that we are forever shaped by the children we once were, and that we are all subject to the beautiful and violent secrets that nature keeps</p>
+                <p class="mt-2">Perfect for fans of Barbara Kingsolver and Karen Russell, Where the Crawdads Sing is at once an exquisite ode to the natural world, a heartbreaking coming-of-age story, and a surprising tale of possible murder. Owens reminds us that we are forever shaped by the children we once were, and that we are all subject to the beautiful and violent secrets that nature keeps</p>
+                <p class="mt-4 mb-10">WHERE THE CRAWDADS LP</p>
+            </div>
+        </div>
+    </section>
+            <!-- =================================== Footer =================================== -->
+
+            <footer class="bg-gray-700 pt-[100px]">
+              <!-- ============= Subscribe section =======================-->
+              <div class="container text-center mx-auto">
+                  <div>
+                      <!-- Subscribe text -->
+                      <h1 class="text-white text-5xl mb-3">
+                          Join Our Newsletter
+                      </h1>
+                      <p class="text-gray-300 text-xl">
+                          Signup to be the first to hear about exclusive deals,
+                          special offers and upcoming collections
+                      </p>
+                  </div>
+                  <div class="flex w-[60%] mx-auto mt-5 gap-5 flex-col content-center md:flex-row">
+                      <!-- Group input -->
+                      <input
+                          type="email"
+                          id="email"
+                          placeholder="Enter email for weekly newsletter"
+                          class="grow border-2 border-orange-600 p-4 bg-transparent inline-block outline-0 placeholder:text-xl text-xl text-white" />
+                      <div class="w-[190px] flex items-center justify-center">
+                          <button
+                              class="bg-orange-600 w-[100%] h-[100%] text-white text-xl uppercase">
+                              Subscribe
+                          </button>
+                      </div>
+                  </div>
+              </div>
+              <!-- ============= Subscribe section =======================-->
+              <!-- ============= Section Body Footer =======================-->
+              <!-- ====== content ======== -->
+  
+              <div class="container mx-auto mt-20 xl:text-left text-center mb-5">
+                  <div class="grid xl:grid-cols-4 xl:gap-20">
+                      <!-- ========= info =========== -->
+                      <div class=""> 
+                          <h3 class="text-3xl text-white mb-8">Library</h3>
+                          <ul>
+                              <li class="text-white text-xl mb-2">
+                                  1418 River Drive, Suite 35 Cottonhall, CA 9622
+                                  United States
+                              </li>
+                              <li class="text-white text-xl mb-2">
+                                  sale@bookworm.com
+                              </li>
+                              <li class="text-white text-xl mb-2">
+                                  +1 246-345-0695
+                              </li>
+                          </ul>
+                          <ul class="flex gap-5 items-center justify-center xl:justify-start py-8">
+                              <li class="w-[45px] h-[45px]  bg-gray-600 flex items-center justify-center cursor-pointer">
+                                  <i class="fa-brands text-white fa-facebook"></i>
+                              </li>
+                              <li class="w-[45px] h-[45px] bg-gray-600 flex items-center justify-center cursor-pointer">
+                                  <i class="fa-brands text-white   fa-twitter"></i>
+                              </li>
+                              <li class="w-[45px] h-[45px] bg-gray-600 flex items-center justify-center cursor-pointer">
+                                  <i class="fa-brands text-white  fa-instagram"></i>
+                              </li>
+                              <li class="w-[45px] h-[45px] bg-gray-600 flex items-center justify-center cursor-pointer">
+                                  <i class="fa-brands text-white   fa-linkedin"></i>
+                              </li>
+                          </ul>
+                      </div>
+                      <!-- ========= info =========== -->
+                      <!-- ========= Explorer =========== -->
+                      <div class=""> 
+                          <h3 class="text-3xl text-white mb-8">Explore</h3>
+                          <ul>
+                              <li class="text-white text-xl mb-2">
+                                  About us
+                              </li>
+                              <li class="text-white text-xl mb-2">
+                                  Sitemap
+                              </li>
+                              <li class="text-white text-xl mb-2">
+                                  Bookmarks
+                              </li>
+                              <li class="text-white text-xl mb-2">
+                                  Sign in/Join
+                              </li>
+                          </ul>
+                      </div>
+                      <!-- ========= Explore =========== -->
+                      <!-- ========= Costumer Services =========== -->
+                      <div class=""> 
+                          <h3 class="text-3xl text-white mb-8">Costumer Services</h3>
+                          <ul>
+                              <li class="text-white text-xl mb-2">
+                                  Help Center
+                              </li>
+                              <li class="text-white text-xl mb-2">
+                                  Returns
+                              </li>
+                              <li class="text-white text-xl mb-2">
+                                  Product Recalls
+                              </li>
+                              <li class="text-white text-xl mb-2">
+                                  Accessibility
+                              </li>
+                              <li class="text-white text-xl mb-2">
+                                  Contact us 
+                              </li>
+                          </ul>
+                      </div>
+                      <!-- ========= Ecostumer Services =========== -->
+                      <!-- ========= Categories =========== -->
+                      <div class=""> 
+                          <h3 class="text-3xl text-white mb-8">Categories</h3>
+                          <ul>
+                              <li class="text-white text-xl mb-2">
+                                  Action
+                              </li>
+                              <li class="text-white text-xl mb-2">
+                                  Comedy
+                              </li>
+                              <li class="text-white text-xl mb-2">
+                                  Drama
+                              </li>
+                              <li class="text-white text-xl mb-2">
+                                  Horror
+                              </li>
+                              <li class="text-white text-xl mb-2">
+                                  Kids
+                              </li>
+                          </ul>
+                      </div>
+                      <!-- ========= Categories =========== -->
+                      
+                  </div>
+              </div>
+              <!-- ====== content ======== -->
+              <!-- ============= Section Body Footer =======================-->
+              <!-- ================= copyright ============================ -->
+              <div class="border-t p-6 text-center">
+                  <p class="text-xl text-white">©2023 Book Worm. All rights reserved</p>
+              </div>
+              <!-- ================= copyright ============================ -->
+          </footer>
+  
+          <!-- =================================== Footer =================================== -->
+          <script src="main.js"></script>
+          <script src="dashboard.js"></script>
+</body>
+</html>

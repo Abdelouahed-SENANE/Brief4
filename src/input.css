@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply  text-white  bg-secondary px-12 py-3 mt-6 tracking-widest uppercase;
+  }
+}
