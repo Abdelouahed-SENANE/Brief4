@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>About us</title>
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="bg-gray-300 h-[80px] w-[100%] relative">
+            <div class="container mx-auto h-[100%]">
+                <!-- === navbar === -->
+                <nav class="md:flex justify-between items-center px-7 h-[100%]">
+                    <!-- Navbar-->
+                    <div class="flex justify-between items-center h-[100%]">
+                        <div><a href="#" class="text-3xl">Library</a></div>
+                        <div class="cursor-pointer md:hidden" id="menuBtn">
+                            <img
+                                src="images/icons_svg/Bars3.svg"
+                                alt="Menu"
+                                class="w-11"
+                                id="imgBtn" />
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <!-- Contqainer nav Bar-->
+                        <ul
+                            id="navLinks"
+                            class="absolute top-[100%] hidden w-[100%] left-0 bg-gray-100 p-7 md:p-0 md:flex md:relative md:bg-transparent transition duration-300 z-20">
+                            <li class="py-2">
+                                <a
+                                    class="text-xl text-primary font-semibold px-4 hover:text-secondary transition duration-150 ease-linear"
+                                    href="index.html"
+                                    >Home</a
+                                >
+                            </li>
+                            <li class="py-2">
+                                <a
+                                    class="text-xl text-primary font-semibold px-4 hover:text-secondary transition duration-150 ease-linear"
+                                    href="Categories.html"
+                                    >Categories</a
+                                >
+                            </li>
+                            <li class="py-2">
+                                <a
+                                    class="text-xl text-primary font-semibold px-4 hover:text-secondary transition duration-150 ease-linear"
+                                    href="contact.html"
+                                    >Contact us</a
+                                >
+                            </li>
+                            <li class="py-2">
+                                <a
+                                    class="text-xl text-primary font-semibold px-4 hover:text-secondary transition duration-150 ease-linear"
+                                    href="about.html"
+                                    >About</a
+                                >
+                            </li>
+                            <li class="py-2">
+                                <a
+                                    <
+                                    class="text-xl text-primary font-semibold px-4 hover:text-secondary transition duration-150 ease-linear"
+                                    href="dashboard.html"
+                                    >Dashboard</a
+                                >
+                            </li>
+                        </ul>
+                        <div class="py-2"></div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- End Header-->
+        <section>
+            <h1 class="text-5xl m-8 text-center">About Us</h1>
+            <div>
+                <img
+                    src="images/img/library.jpg"
+                    class="w-full h-96 object-cover" />
+            </div>
+            <div class="bg-white text-sm text-center p-14 md:mx-40 -ml-10">
+                <h1 class="font-medium text-2xl text-left pb-6">
+                    Welcome to Bookworm
+                </h1>
+                <p class="italic text-xs text-left">
+                    “Many desktop publishing packages and web page editors now
+                    use Lorem Ipsum as their default model search for eolved
+                    over sometimes by accident, sometimes on purpose ”
+                </p>
+                <h4 class="font-medium text-xl text-left mt-8 mb-4">
+                    What we really do?
+                </h4>
+                <p class="text-sm text-left mb-6">
+                    Mauris tempus erat laoreet turpis lobortis, eu tincidunt
+                    erat fermentum. Aliquam non tincidunt urna. Integer
+                    tincidunt nec nisl vitae ullamcorper. Proin sed ultrices
+                    erat. Praesent varius ultrices massa at faucibus. Aenean
+                    dignissim, orci sed faucibus pharetra, dui mi dignissim
+                    tortor, sit amet condimentum mi ligula sit amet augue.
+                    Pellentesque vitae eros eget enim mollis placerat. Aliquam
+                    non tincidunt urna. Integer tincidunt nec nisl vitae
+                    ullamcorper. Proin sed ultrices erat. Praesent varius
+                    ultrices massa at faucibus. Aenean dignissim, orci sed
+                    faucibus pharetra, dui mi dignissim tortor, sit amet
+                    condimentum mi ligula sit amet augue. Pellentesque vitae
+                    eros eget enim mollis placerat.
+                </p>
+                <div class="flex flex-row flex-wrap justify-between">
+                    <div class="float-left">
+                        <h4 class="text-left text-xl font-medium mb-1">
+                            Our Vision
+                        </h4>
+                        <p class="text-left w-96 text-xs sm:mb-4">
+                            Pellentesque sodales augue eget ultricies ultricies.
+                            Cum sociis natoque penatibus et magnis dis
+                            parturient montes, nascetur ridiculus mus. Curabitur
+                            sagittis ultrices condimentum.
+                        </p>
+                    </div>
+                    <!-- <div class="md:float-right sm:float-left"> -->
+                    <div>
+                        <h4 class="text-xl font-medium mb-1 text-left">
+                            Our Vision
+                        </h4>
+                        <!-- <h4 class="text-left text-xl font-medium mb-1">Our Vision</h4> -->
+                        <p class="w-96 text-xs text-left">
+                            Pellentesque sodales augue eget ultricies ultricies.
+                            Cum sociis natoque penatibus et magnis dis
+                            parturient montes, nascetur ridiculus mus. Curabitur
+                            sagittis ultrices condimentum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================== Footer =================================== -->
+
+        <footer class="bg-gray-700 pt-[100px]">
+            <!-- ============= Subscribe section =======================-->
+            <div class="container text-center mx-auto">
+                <div>
+                    <!-- Subscribe text -->
+                    <h1 class="text-white text-5xl mb-3">
+                        Join Our Newsletter
+                    </h1>
+                    <p class="text-gray-300 text-xl">
+                        Signup to be the first to hear about exclusive deals,
+                        special offers and upcoming collections
+                    </p>
+                </div>
+                <div
+                    class="flex w-[60%] mx-auto mt-5 gap-5 flex-col md:flex-row">
+                    <!-- Group input -->
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter email for weekly newsletter"
+                        class="grow border-2 border-orange-600 p-4 bg-transparent inline-block outline-0 placeholder:text-xl text-xl text-white" />
+                    <div class="w-[190px] flex items-center justify-center">
+                        <button
+                            class="bg-orange-600 w-[100%] h-[100%] text-white text-xl uppercase">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- ============= Subscribe section =======================-->
+            <!-- ============= Section Body Footer =======================-->
+            <!-- ====== content ======== -->
+
+            <div class="container mx-auto mt-20 xl:text-left text-center mb-5">
+                <div class="grid xl:grid-cols-4 xl:gap-20">
+                    <!-- ========= info =========== -->
+                    <div class="">
+                        <h3 class="text-3xl text-white mb-8">Library</h3>
+                        <ul>
+                            <li class="text-white text-xl mb-2">
+                                1418 River Drive, Suite 35 Cottonhall, CA 9622
+                                United States
+                            </li>
+                            <li class="text-white text-xl mb-2">
+                                sale@bookworm.com
+                            </li>
+                            <li class="text-white text-xl mb-2">
+                                +1 246-345-0695
+                            </li>
+                        </ul>
+                        <ul
+                            class="flex gap-5 items-center justify-center xl:justify-start py-8">
+                            <li
+                                class="w-[45px] h-[45px] bg-gray-600 flex items-center justify-center cursor-pointer">
+                                <i class="fa-brands text-white fa-facebook"></i>
+                            </li>
+                            <li
+                                class="w-[45px] h-[45px] bg-gray-600 flex items-center justify-center cursor-pointer">
+                                <i class="fa-brands text-white fa-twitter"></i>
+                            </li>
+                            <li
+                                class="w-[45px] h-[45px] bg-gray-600 flex items-center justify-center cursor-pointer">
+                                <i
+                                    class="fa-brands text-white fa-instagram"></i>
+                            </li>
+                            <li
+                                class="w-[45px] h-[45px] bg-gray-600 flex items-center justify-center cursor-pointer">
+                                <i class="fa-brands text-white fa-linkedin"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- ========= info =========== -->
+                    <!-- ========= Explorer =========== -->
+                    <div class="">
+                        <h3 class="text-3xl text-white mb-8">Explore</h3>
+                        <ul>
+                            <li class="text-white text-xl mb-2">About us</li>
+                            <li class="text-white text-xl mb-2">Sitemap</li>
+                            <li class="text-white text-xl mb-2">Bookmarks</li>
+                            <li class="text-white text-xl mb-2">
+                                Sign in/Join
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- ========= Explore =========== -->
+                    <!-- ========= Costumer Services =========== -->
+                    <div class="">
+                        <h3 class="text-3xl text-white mb-8">
+                            Costumer Services
+                        </h3>
+                        <ul>
+                            <li class="text-white text-xl mb-2">Help Center</li>
+                            <li class="text-white text-xl mb-2">Returns</li>
+                            <li class="text-white text-xl mb-2">
+                                Product Recalls
+                            </li>
+                            <li class="text-white text-xl mb-2">
+                                Accessibility
+                            </li>
+                            <li class="text-white text-xl mb-2">Contact us</li>
+                        </ul>
+                    </div>
+                    <!-- ========= Ecostumer Services =========== -->
+                    <!-- ========= Categories =========== -->
+                    <div class="">
+                        <h3 class="text-3xl text-white mb-8">Categories</h3>
+                        <ul>
+                            <li class="text-white text-xl mb-2">Action</li>
+                            <li class="text-white text-xl mb-2">Comedy</li>
+                            <li class="text-white text-xl mb-2">Drama</li>
+                            <li class="text-white text-xl mb-2">Horror</li>
+                            <li class="text-white text-xl mb-2">Kids</li>
+                        </ul>
+                    </div>
+                    <!-- ========= Categories =========== -->
+                </div>
+            </div>
+            <!-- ====== content ======== -->
+            <!-- ============= Section Body Footer =======================-->
+            <!-- ================= copyright ============================ -->
+            <div class="border-t p-6 text-center">
+                <p class="text-xl text-white">
+                    ©2023 Book Worm. All rights reserved
+                </p>
+            </div>
+            <!-- ================= copyright ============================ -->
+        </footer>
+
+        <!-- =================================== Footer =================================== -->
+        <script src="main.js"></script>
+    </body>
+</html>
