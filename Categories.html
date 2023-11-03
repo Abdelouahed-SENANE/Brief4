@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tailwind projet</title>
+        <!-- ===== Framework Tailwind ==== -->
+        <link rel="stylesheet" href="/dist/output.css" />
+        <!-- === Awesome Fonts === -->
+        <script
+            src="https://kit.fontawesome.com/d0fb25e48c.js"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: "#2D3B46",
+                            secondary: "#F24F09",
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="bg-gray-300 h-[80px] w-[100%] relative">
+            <div class="container mx-auto h-[100%]">
+                <!-- === navbar === -->
+                <nav class="md:flex justify-between items-center px-7 h-[100%]">
+                    <!-- Navbar-->
+                    <div class="flex justify-between items-center h-[100%]">
+                        <div><a href="#" class="text-3xl">Library</a></div>
+                        <div class="cursor-pointer md:hidden" id="menuBtn">
+                            <img
+                                src="images/icons_svg/Bars3.svg"
+                                alt="Menu"
+                                class="w-11"
+                                id="imgBtn" />
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <!-- Contqainer nav Bar-->
+                        <ul
+                            id="navLinks"
+                            class="absolute top-[100%] hidden w-[100%] left-0 bg-gray-100 p-7 md:p-0 md:flex md:relative md:bg-transparent transition duration-300 z-20">
+                            <li class="py-2">
+                                <a
+                                    class="text-xl text-primary font-semibold px-4 hover:text-secondary transition duration-150 ease-linear"
+                                    href="#"
+                                    >Home</a
+                                >
+                            </li>
+                            <li class="py-2">
+                                <a
+                                    class="text-xl text-primary font-semibold px-4 hover:text-secondary transition duration-150 ease-linear"
+                                    href="Categories.html"
+                                    >Categories</a
+                                >
+                            </li>
+                            <li class="py-2">
+                                <a
+                                    class="text-xl text-primary font-semibold px-4 hover:text-secondary transition duration-150 ease-linear"
+                                    href="#"
+                                    >Pages</a
+                                >
+                            </li>
+                            <li class="py-2">
+                                <a
+                                    class="text-xl text-primary font-semibold px-4 hover:text-secondary transition duration-150 ease-linear"
+                                    href="#"
+                                    >Others</a
+                                >
+                            </li>
+                            <li class="py-2">
+                                <a
+                                    <
+                                    class="text-xl text-primary font-semibold px-4 hover:text-secondary transition duration-150 ease-linear"
+                                    href="dashboard.html"
+                                    >Dashboard</a
+                                >
+                            </li>
+                        </ul>
+                        <div class="py-2"></div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- End Header-->
+        <div class="p-[100px] bg-gray-100">
+            <div class="container mx-auto">
+                <div class="grid gap-6 xl:grid-cols-4">
+                    <aside class="p-5 bg-white lg:col-span-1" >
+                        <div class="relative mb-8">
+                            <h2 class="text-3xl font-bold">Categories</h2>
+                            <span class="w-[60px] h-[3px] bg-black absolute right-0 top-[50%] translate-y-[-50%]"></span>
+                        </div>
+                        <ul class="mt-10" id="sideBarCats"> 
+
+                        </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </aside>
+                    <main class="xl:col-span-3">
+                        <div class="flex justify-between items-center pb-5">
+                            <h4 class="text-2xl font-medium">Showing books</h4>
+                            <div
+                                class="flex justify-between items-center gap-5">
+                                <h4 class="text-2xl font-medium">View list</h4>
+                                <div class="">
+                                    <i
+                                        class="fa-solid fa-table-cells text-2xl mr-1 cursor-pointer text-secondary hover:text-secondary transition duration-400"
+                                        id="iconTable"></i>
+                                    <i
+                                        class="fa-solid fa-list text-2xl hover:text-secondary transition duration-400 cursor-pointer"
+                                        id="listDisplay"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- =========== Display Table ============ -->
+                        <div class="" id="tableBook">
+                            <div
+                                class="bg-white p-5 gap-5 grid lg:grid-cols-3"
+                                id="getData"></div>
+                        </div>
+
+                        <!-- =========== Display List ============= -->
+                        <div class="hidden" id="listBook">
+                            
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ Script JS =========  -->
+        <script src="main.js" defer></script>
+        <script src="onload.js" defer></script>
+    </body>
+</html>
