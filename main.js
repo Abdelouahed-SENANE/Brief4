@@ -18,3 +18,26 @@ menuBtn.addEventListener("click", () => {
   }
 });
 // ========= End Nav bar Script ============
+//===================bag====================
+const shoppingBag = document.getElementById("shopping-bag");
+const bagButton = document.getElementById("bag-button");
+
+// Function to show the shopping bag
+function showShoppingBag() {
+    shoppingBag.style.left = "0";
+}
+
+// Function to hide the shopping bag
+function hideShoppingBag() {
+    shoppingBag.style.left = "-100%";
+}
+
+// Toggle the shopping bag when the button is clicked
+bagButton.addEventListener("click", function () {
+    if (shoppingBag.style.left === "0px") {
+        hideShoppingBag();
+    } else {
+        showShoppingBag();
+    }
+});
+// =================end bag======================

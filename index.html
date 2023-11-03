@@ -57,7 +57,7 @@
                                 <li class="py-2">
                                     <a
                                         class="text-xl text-primary font-semibold px-4 hover:text-secondary transition duration-150 ease-linear"
-                                        href="#"
+                                        href="index.html"
                                         >Home</a
                                     >
                                 </li>
@@ -88,6 +88,14 @@
                                         class="text-xl text-primary font-semibold px-4 hover:text-secondary transition duration-150 ease-linear"
                                         href="dashboard.html"
                                         >Dashboard</a
+                                    >
+                                </li>
+                                <li class="py-2">
+                                    <a
+                                        id="bag-button"
+                                        class="text-xl text-primary font-semibold px-4 hover:text-secondary transition duration-150 ease-linear"
+                                        href="#"
+                                        >bag</a
                                     >
                                 </li>
                             </ul>
@@ -130,7 +138,7 @@
 
         <!-- ======= Start Bestselling Books ====== -->
 
-        <div class="pt-[100px] pb-[50px]">
+        <div class="pt-[100px] pb-[0px]">
             <div class="container mx-auto">
                 <!-- ================= Header ================= -->
                 <div class="mx-3 flex items-center justify-between"">
@@ -588,6 +596,20 @@
 
         <!-- =================================== Footer =================================== -->
 
+
+                    <!-- =======================bag============================== -->
+            <div id="shopping-bag" class=" fixed bg-gray-300 text-black border top-0 
+                                right-[-100%]  w-1/4 h-screen  duration-300 ease-in-out">
+                <div class="flex flex-row gap-2 place-content-center top-0">
+                    <div><img src="./images/img/panier.png" alt="" width="40" height="40"></div>
+                    <div><h2>Your Shopping bag</h2></div>
+                </div>
+                <div class="text-center mt-20 flex flex-col place-content-center">
+                    <img class="mx-40"  src="./images/img/panier.png" alt="" width="100" height="100">
+                    <p>Your Shopping bag is empty</p>
+                </div>
+            </div>     
+            <!-- =================================end bag============================ -->
         <!-- ============ Script JS =========  -->
         <script src="main.js" defer></script>
     </body>
