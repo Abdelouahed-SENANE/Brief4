@@ -630,10 +630,6 @@ video {
   z-index: 20;
 }
 
-.z-40 {
-  z-index: 40;
-}
-
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
@@ -1074,8 +1070,8 @@ video {
   --tw-bg-opacity: 0.9;
 }
 
-.bg-\[url\(\'\.\.\/images\/img\/bg\.jpg\'\)\] {
-  background-image: url('../images/img/bg.jpg');
+.bg-\[url\(\'images\/img\/bg\.jpg\'\)\] {
+  background-image: url('images/img/bg.jpg');
 }
 
 .bg-cover {
