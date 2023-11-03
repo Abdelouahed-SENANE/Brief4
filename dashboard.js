@@ -44,10 +44,10 @@ const errorTitle = document.getElementById("errorTitle");
 const errorQte = document.getElementById("qte");
 const errorPrice = document.getElementById("price");
 const fieldTxt = document.getElementById("textField");
+const fieldSelect = document.getElementById("selectOption");
 const errorDesc = document.getElementById("errorDispo");
 const tableBody = document.getElementById("tbody");
 const txtVar = document.getElementById("textVar");
-
 
 function checkDesc() {
     if (fieldDispo.value == 0) {
@@ -125,9 +125,6 @@ submitBtn.addEventListener("click", (e) => {
     ValidateDesc();
     checkDesc();
     AddBookLocalstorage();
-    if (!submitBtn.classList.contains("hidden")) {
-        txtVar.innerText = "Add new book";
-    }
     e.preventDefault();
 });
 // ==========================
@@ -144,6 +141,7 @@ function AddBookLocalstorage() {
         const book = {
             id: id,
             title: fieldTitle.value,
+            categorie: fieldSelect.value,
             prix: fieldPrice.value,
             quantitè: fieldQuantite.value,
             description: fieldTxt.value,
@@ -181,6 +179,9 @@ function DisplayBooks() {
             ${e.title}
         </td>
         <td class="p-2 border border-gray-300 text-xl">
+            ${e.categorie}
+        </td>
+        <td class="p-2 border border-gray-300 text-xl">
         ${e.prix}
         </td>
         <td class="p-2 border border-gray-300 text-xl">
@@ -193,12 +194,12 @@ function DisplayBooks() {
         <td
             class="p-2 border border-gray-300 text-xl gap-5">
             <button onclick=Update(${index})
-                class="w-[100px] p-1  inline-block">
-                <i class="fa-solid fa-pencil text-xl"></i>
+                class="w-[55px] py-2  bg-green-400 ">
+                <i class="fa-solid fa-pencil text-2xl text-white "></i>
             </button>
             <button onclick=delFunction(${index})
-                class="w-[100px] p-1 bg-red-500 ">
-                <i class="fa-solid fa-trash text-xl"></i>
+                class="w-[55px] py-2 bg-red-500 text-xl text-white">
+                <i class="fa-solid fa-trash text-2xl text-white"></i>
             </button>
         </td>
     </tr>  
@@ -227,7 +228,6 @@ const addProduct = document.getElementById("addProduct");
 addBtn.addEventListener("click", () => {
     overlay.classList.remove("hidden");
     addProduct.classList.remove("hidden");
-
 });
 overlay.addEventListener("click", () => {
     overlay.classList.add("hidden");
@@ -242,8 +242,6 @@ function Update(index) {
 
     submitBtn.classList.add("hidden");
     editBtn.classList.remove("hidden");
-    if (editBtn.classList.contains) {
-    }
     overlay.classList.remove("hidden");
     addProduct.classList.remove("hidden");
 
@@ -254,6 +252,7 @@ function Update(index) {
     }
 
     fieldTitle.value = bookData[index].title;
+    fieldSelect.value = bookData[index].categorie;
     fieldTxt.value = bookData[index].description;
     fieldPrice.value = bookData[index].prix;
     fieldQuantite.value = bookData[index].quantitè;
@@ -268,6 +267,7 @@ function Update(index) {
             checkDesc()
         ) {
             bookData[index].title = fieldTitle.value;
+            bookData[index].categorie = fieldSelect.value;
             bookData[index].description = fieldTxt.value;
             bookData[index].prix = fieldPrice.value;
             bookData[index].quantitè = fieldQuantite.value;
@@ -275,13 +275,169 @@ function Update(index) {
         }
         localStorage.setItem("books", JSON.stringify(bookData));
         DisplayBooks();
+        resetInput();
         submitBtn.classList.remove("hidden");
         editBtn.classList.add("hidden");
         overlay.classList.add("hidden");
         addProduct.classList.add("hidden");
-        resetInput();
     };
+    overlayCateg.addEventListener('click' , () => {
+        editBtn.classList.add("hidden");
+        submitBtn.classList.remove("hidden");
+    })
 }
-//===================================== Categories =============================
+//===================================== Add Categories =============================
+// Show formulaoire Categorie
+const AddCategorie = document.getElementById("AddCategorie");
+const overlayCateg = document.getElementById("overlayCategorie");
+const categorieForm = document.getElementById("AddFormCats");
+
+AddCategorie.addEventListener("click", () => {
+    overlayCateg.classList.remove("hidden");
+    categorieForm.classList.remove("hidden");
+});
+
+overlayCateg.addEventListener("click", () => {
+    overlayCateg.classList.add("hidden");
+    categorieForm.classList.add("hidden");
+});
+// Validate function Categories
+const fieldCats = document.getElementById("categorieField");
+const textDescCats = document.getElementById("catDescp");
+function validateCategories() {
+    const errorCats = document.getElementById("errorCats");
+
+    if (fieldCats.value == "" || fieldCats.value.length === null) {
+        errorCats.innerText = "Please Enter categorie name";
+        return false;
+    }
+    if (textDescCats.value == "" || textDescCats.value === null) {
+        textDescCats.classList.add("border-2");
+        textDescCats.classList.add("border-red-500");
+        return false;
+    } else {
+        errorCats.innerText = "";
+        textDescCats.classList.remove("border-2");
+        textDescCats.classList.remove("border-red-500");
+        return true;
+    }
+}
+// Submit Button ========
+
+const addNewCats = document.getElementById("AddCats");
+let categories = [];
+addNewCats.addEventListener("click", (e) => {
+    e.preventDefault();
+    validateCategories();
+    addCategorie();
 
 
+});
+
+// Add Function Categories
+
+function addCategorie() {
+    if (validateCategories() === true) {
+        const id = new Date().getTime().toString();
+        const categorie = {
+            id: id,
+            name: fieldCats.value,
+            description: textDescCats.value,
+        };
+        categories.push(categorie);
+        localStorage.setItem("categories", JSON.stringify(categories));
+        DisplayCats();
+        resetCats();
+        overlayCateg.classList.add("hidden");
+        categorieForm.classList.add("hidden");
+    }
+}
+function resetCats() {
+    fieldCats.value = "";
+    textDescCats.value = "";
+}
+const tbodyCats = document.getElementById("tbodyCategorie");
+
+function DisplayCats() {
+    if (localStorage.getItem("categories") === null) {
+        categories = [];
+    } else {
+        categories = JSON.parse(localStorage.getItem("categories"));
+    }
+
+    tbodyCats.innerHTML = "";
+    categories.forEach((categorie, i) => {
+        tbodyCats.innerHTML += `
+             <tr>
+                <td class="p-2 border border-gray-300 text-xl">
+                    ${categorie.id}
+                </td>
+                <td class="p-2 border border-gray-300 text-xl">
+                    ${categorie.name}
+                </td>
+                <td class="p-5 border border-gray-300 max-w-[300px] overflow-hidden text-xl">
+                    ${categorie.description}
+                </td>
+                <td
+                class="p-2 border border-gray-300 text-xl gap-5">
+                <button onclick=updateCats(${i})
+                    class="w-[55px] py-2  bg-green-400 ">
+                    <i class="fa-solid fa-pencil text-2xl text-white "></i>
+                </button>
+                <button onclick=DelCategorie(${i})
+                    class="w-[55px] py-2 bg-red-500 text-xl text-white">
+                    <i class="fa-solid fa-trash text-2xl text-white"></i>
+                </button>
+                </td>
+            </tr>
+
+            `;
+    });
+}
+DisplayCats();
+
+function DelCategorie(index) {
+    if (localStorage.getItem("categories") === null) {
+        categories = [];
+    } else {
+        categories = JSON.parse(localStorage.getItem("categories"));
+    }
+    categories.splice(index, 1);
+    localStorage.setItem("categories", JSON.stringify(categories));
+    DisplayCats();
+}
+
+function updateCats(i) {
+    const editCats = document.getElementById("editCategorie");
+    editCats.classList.remove("hidden");
+    addNewCats.classList.add("hidden");
+    overlayCateg.classList.remove("hidden");
+    categorieForm.classList.remove("hidden");
+    if (localStorage.getItem("categories") === null) {
+        categories = [];
+    } else {
+        categories = JSON.parse(localStorage.getItem("categories"));
+    }
+    fieldCats.value = categories[i].name;
+    textDescCats.value = categories[i].description;
+
+    editCats.onclick = function () {
+        if (validateCategories() === true) {
+            categories[i].name = fieldCats.value;
+            categories[i].description = textDescCats.value;
+        }
+
+        localStorage.setItem("categories", JSON.stringify(categories));
+        DisplayCats();
+        resetCats();
+        overlayCateg.classList.add("hidden");
+        categorieForm.classList.add("hidden");
+        editCats.classList.add("hidden");
+        addNewCats.classList.remove("hidden");
+
+    };
+    overlayCateg.addEventListener('click' , () => {
+        editCats.classList.add("hidden");
+        addNewCats.classList.remove("hidden");
+    })
+}

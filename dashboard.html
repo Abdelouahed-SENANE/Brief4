@@ -63,7 +63,7 @@
             <!-- =============== Main  ================== -->
             <main class="col-span-3 bg-white" id="pages">
                 <!-- ================ profile ===============-->
-                <div class="bg-slate-100 p-3" id="profile">
+                <div class="bg-slate-100 p-3 hidden" id="profile">
                     <!-- ===== title ==== -->
                     <div>
                         <h2 class="text-3xl font-bold mb-3 text-gray-700">
@@ -87,7 +87,7 @@
                                 <div
                                     class="w-[120px] h-[120px] rounded-full mb-5">
                                     <img
-                                        src="imgs/admin.jpg"
+                                        src="images/img/admin.jpg"
                                         alt=""
                                         class="w-[100%] h-[100%] rounded-full" />
                                 </div>
@@ -285,6 +285,19 @@
                                         id="price"
                                         class="text-red-600 font-medium text-xl my-3"></span>
                                 </div>
+                                <div class="">
+                                    <label
+                                        for=""
+                                        class="text-xl font-medium mb-2 text-gray-600"
+                                        >Choose Categorie</label
+                                    >
+                                    <select id="selectOption" class="w-[100%] py-2 p-2 mb-3 text-2xl outline-none border border-gray-500 font-medium">
+                                      <option class="text-2xl font-medium" value="Horreur">Horreur</option>
+                                      <option class="text-2xl font-medium" value="Romance">Romance</option>
+                                      <option class="text-2xl font-medium" value="Roman">Roman</option>
+                                      <option class="text-2xl font-medium" value="Fantasy">Fantasy</option>
+                                    </select>
+                                  </div>
                                 <div>
                                     <label
                                         for=""
@@ -366,11 +379,12 @@
                     <!-- ================ Add product ===============-->
                     <!-- ===== Table Products ==== -->
                     <table class="w-[100%]">
-                        <thead class="bg-slate-800 text-zinc-50 text-center">
-                            <td class="p-4 uppercase font-medium">ID</td>
-                            <td class="p-4 uppercase font-medium">Titre</td>
-                            <td class="p-4 uppercase font-medium">Prix</td>
-                            <td class="p-4 uppercase font-medium">
+                        <thead class="bg-slate-800 text-xl text-zinc-50  text-center">
+                            <td class="p-4 uppercase font-bold">ID</td>
+                            <td class="p-4 uppercase font-bold">Titre</td>
+                            <td class="p-4 uppercase font-bold">Categorie</td>
+                            <td class="p-4 uppercase font-bold">Prix</td>
+                            <td class="p-4 uppercase font-bold">
                                 Qtè en Stock
                             </td>
                             <td class="p-4 uppercase font-medium">
@@ -379,7 +393,7 @@
                             <td class="p-4 uppercase font-medium">Actions</td>
                         </thead>
                         <tbody class="bg-white text-center" id="tbody">
-                            <tr>
+                            <!-- <tr>
                                 <td class="p-2 border border-gray-300 text-xl">
                                     1
                                 </td>
@@ -406,14 +420,16 @@
                                         Delete
                                     </button>
                                 </td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                     <!-- ===== Table Products ==== -->
                 </div>
                 <!-- ================ Section View products ===============-->
                 <!-- ================ Categories ===============-->
-                <div class="p-5 bg-slate-200 " id="categories">
+                <div class="p-5 bg-slate-200 w-full h-[100vh] " id="categories">
+                    <div class="absolute top-0 left-0 w-[100%] h-[100%] bg-black opacity-60 z-10 hidden"
+                    id="overlayCategorie"></div>
                     <!-- ===== title ==== -->
 
                     <div
@@ -431,44 +447,99 @@
                         </div>
 
                         <div>
-                            <button
-                                class="bg-secondary px-5 py-2 text-white font-medium rounded-md">
+                            <button id="AddCategorie"
+                                class="bg-secondary px-10 py-3 text-white font-medium text-xl rounded-md">
                                 Add Categorie
                             </button>
                         </div>
                     </div>
                     <!-- ===== title ==== -->
                     <!-- ======== Categories ============ -->
-                    <div class="bg-white mt-4 p-5">
-                        <form action="">
-                            <div>
-                                <h2 class="text-center">Add Categories</h2>
-                            </div>
-                        </form>
-                        <div class="grid xl:grid-cols-4 gap-5" id="Categories">
-                            <!-- <div class="shadow shadow-slate-200">
-                                <div
-                                    class="h-[150px] flex items-center justify-center p-6 bg-slate-900">
-                                    <i
-                                        class="fa-solid fa-flask text-6xl text-white"></i>
+                        <div class="bg-white mt-4 p-5" id="Categories">
+                            <form id="AddFormCats" class="flex items-center w-[800px]  bg-white p-6 rounded-md justify-center flex-col absolute top-[30%] left-[50%] translate-[-50%, -50%] z-30 hidden" >
+                                <div>
+                                    <h2 class="text-center text-4xl font-bold">Add Categories</h2>
                                 </div>
-                                <div
-                                    class="text-center text-[20px] font-bold my-2">
-                                    Siences et Math
+                                <div class=" p-6 mt-5 mb-2 w-full  ">
+                                    <div>
+                                        <label
+                                            for=""
+                                            class="text-xl font-medium text-gray-600"
+                                            >Ajouter Categories
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="categorieField"
+                                            placeholder="Entre Categorie"
+                                            class="block outline-0 border-b border-gray-600 bg-transparent py-2 text-xl w-[100%] mb-4 text" />
+                                        <span
+                                            id="errorCats"
+                                            class="text-red-600 font-medium text-xl my-3"></span>
+                                    </div>
+                                    <div class="pt-4">
+                                        <label
+                                            for=""
+                                            class="text-xl font-medium text-gray-600"
+                                            >Description Categories
+                                        </label>
+                                        <div class="pt-3">
+                                            <textarea
+                                                class="resize-none text-xl p-2 min-h-[150px] w-[100%] outline-none  bg-gray-100 placeholder:text-xl placeholder:text-gray-600 placeholder:font-medium"
+                                                placeholder="Description de Livre"
+                                                id="catDescp"></textarea>
+                                        </div>
+                                        <div class="flex items-center justify-center gap-4">
+                                            <button
+                                            class=" bg-secondary w-[200px] text-white text-xl font-medium p-3 mt-5"
+                                            type="submit"
+                                            id="AddCats">
+                                            Add Categorie
+                                        </button>
+                                        <button
+                                            class=" bg-blue-600 w-[160px] text-white text-xl font-medium p-3 mt-5 hidden" "
+                                            id="editCategorie">
+                                            Update
+                                        </button>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="text-right p-3">
-                                    <button
-                                        class="px-4 bg-green-700 text-white">
-                                        Edit
-                                    </button>
-                                    <button class="px-3 bg-red-600 text-white">
-                                        Delete
-                                    </button>
-                                </div>
-                            </div> -->
-                            </div>
+                            </form>
+                            <table class="w-[100%]">
+                                <thead class="bg-slate-800 text-xl text-zinc-50  text-center">
+                                    <td class="p-4 uppercase font-bold">ID</td>
+                                    <td class="p-4 uppercase font-bold">Categories</td>
+                                    <td class="p-4 uppercase font-bold">Description</td>
+
+                                    <td class="p-4 uppercase font-medium">Actions</td>
+                                </thead>
+                                <tbody class="bg-white text-center" id="tbodyCategorie">
+                                    <!-- <tr>
+                                        <td class="p-2 border border-gray-300 text-xl">
+                                            1
+                                        </td>
+                                        <td class="p-2 border border-gray-300 text-xl">
+                                            Categorie Name
+                                        </td>
+                                        <td class="p-2 border border-gray-300 text-xl">
+                                            Description
+                                        </td>
+                                        <td
+                                        class="p-2 border border-gray-300 text-xl gap-5">
+                                        <button onclick=Update(${index})
+                                            class="w-[55px] py-2  bg-green-400 ">
+                                            <i class="fa-solid fa-pencil text-2xl text-white "></i>
+                                        </button>
+                                        <button onclick=delFunction(${index})
+                                            class="w-[55px] py-2 bg-red-500 text-xl text-white">
+                                            <i class="fa-solid fa-trash text-2xl text-white"></i>
+                                        </button>
+                                    </td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                            
                         </div>
-                    </div>
+
                     <!-- ======== Categories ============ -->
                 </div>
                 <!-- ================ Categories ===============-->
