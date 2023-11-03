@@ -48,6 +48,8 @@ const fieldSelect = document.getElementById("selectOption");
 const errorDesc = document.getElementById("errorDispo");
 const tableBody = document.getElementById("tbody");
 const txtVar = document.getElementById("textVar");
+const image = document.getElementById('upImage');
+const bookImg = document.getElementById('bookImg');
 
 function checkDesc() {
     if (fieldDispo.value == 0) {
@@ -144,6 +146,7 @@ function AddBookLocalstorage() {
             categorie: fieldSelect.value,
             prix: fieldPrice.value,
             quantitè: fieldQuantite.value,
+            imagesBook : getBase64Image(image),
             description: fieldTxt.value,
             disponibilitè: fieldDispo.value,
         };
@@ -281,10 +284,10 @@ function Update(index) {
         overlay.classList.add("hidden");
         addProduct.classList.add("hidden");
     };
-    overlayCateg.addEventListener('click' , () => {
+    overlayCateg.addEventListener("click", () => {
         editBtn.classList.add("hidden");
         submitBtn.classList.remove("hidden");
-    })
+    });
 }
 //===================================== Add Categories =============================
 // Show formulaoire Categorie
@@ -330,8 +333,6 @@ addNewCats.addEventListener("click", (e) => {
     e.preventDefault();
     validateCategories();
     addCategorie();
-
-
 });
 
 // Add Function Categories
@@ -434,10 +435,30 @@ function updateCats(i) {
         categorieForm.classList.add("hidden");
         editCats.classList.add("hidden");
         addNewCats.classList.remove("hidden");
-
     };
-    overlayCateg.addEventListener('click' , () => {
+    overlayCateg.addEventListener("click", () => {
         editCats.classList.add("hidden");
         addNewCats.classList.remove("hidden");
-    })
+    });
+}
+// Add upload image and save in img 
+
+bookImg.addEventListener("change", function() {
+
+    if (this.files && this.files[0]) {
+        image.src = URL.createObjectURL(this.files[0]); // set src to blob url
+    }
+});
+function getBase64Image(img) {
+    var canvas = document.createElement("canvas");
+    canvas.width = img.width;
+    canvas.height = img.height;
+
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0);
+
+    var dataURL = canvas.toDataURL("image/png");
+
+    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+
 }
